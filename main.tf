@@ -19,7 +19,7 @@ resource "aws_instance" "myawsserver" {
 
   tags = {
     Name = "Gagan-Ubuntu-Server"
-    Env = "Dev"
+    Env = "Prod"
   }
   provisioner "local-exec" {
     command = "echo The servers IP address is ${self.public_ip} && echo ${self.private_ip} myawsserver >> /etc/hosts"
